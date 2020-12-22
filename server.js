@@ -20,7 +20,7 @@ client.on("message", async m => {
     let kmt = arg[0];
     
     if (kmt === "eval") {
-        if(m.author.id !== "460154149040947211") return;
+        if(m.author.id !== require("./bilgi.json").evalYetkiliID) return;
         try {
             const code = args.join(" ");
             let evaled = eval(code);
